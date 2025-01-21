@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-security-keycloak
+            client-secret: 5c5p0QJ4wZZNZ69O1McLPNzlxoVBjiJJ
+            scope: openid, profile, email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/th
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/th
