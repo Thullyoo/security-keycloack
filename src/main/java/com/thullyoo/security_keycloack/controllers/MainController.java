@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @GetMapping(name = "/public")
+    @GetMapping("/public")
     String publicRoute() {
         return "<h1>Public route, feel free to look around! 🔓 </h1>";
     }
 
     @GetMapping("/private")
     String privateRoute(@AuthenticationPrincipal OidcUser principal) {
-        return """
+        return String.format("""
 				<h1>Private route, only authorized personal! 🔐  </h1>
-				""";
+				""");
     }
 
     @GetMapping("/cookie")

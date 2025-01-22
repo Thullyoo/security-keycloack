@@ -7,7 +7,7 @@ spring:
         registration:
           keycloak:
             client-id: spring-security-keycloak
-            client-secret: 5c5p0QJ4wZZNZ69O1McLPNzlxoVBjiJJ
+            client-secret:
             scope: openid, profile, email
         provider:
           keycloak:
